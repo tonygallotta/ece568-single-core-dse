@@ -22,7 +22,7 @@ do
     let counter=counter+1
   fi
   if ! ((counter % 8)); then
-    echo "waiting for jobs to complete, count = $counter"
+    echo "$(date) - waiting for jobs to complete, count = $counter"
     wait
   fi
 done

@@ -68,7 +68,7 @@ Level 2 Cache Power Consumption: 4.2091 (5.87%)
  tagarray_power (W): 0.531433
 sim: command line: sim-outorder -redir:sim /home/ubuntu/ece568-single-core-dse/results/mem-bsize-128.out -config /home/ubuntu/ece568-single-core-dse/configs/step1-mem/mem-bsize-128.cfg eeg 
 
-sim: simulation started @ Sat Mar  5 19:37:05 2016, options follow:
+sim: simulation started @ Sat Mar  5 20:11:55 2016, options follow:
 
 sim-outorder: This simulator implements a very detailed out-of-order issue
 superscalar processor with a two-level memory system and speculative
@@ -472,6 +472,6 @@ ld_target_big_endian              0 # target executable endian-ness, non-zero if
 mem.page_count                   35 # total number of pages allocated
 mem.page_mem                   140k # total size of memory pages allocated
 mem.ptab_misses                  35 # total first level page table misses
-mem.ptab_accesses            775868 # total page table accesses
+mem.ptab_accesses            775950 # total page table accesses
 mem.ptab_miss_rate           0.0000 # first level page table miss rate
 
