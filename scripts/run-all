@@ -1,12 +1,13 @@
 #!/bin/bash
 
 if [ $# -eq 0 ]; then
-    echo "usage: run-all <config_dir>"
+    echo "usage: run-all <config_dir> <num_cores>"
     exit -1
 fi
 
 base_dir=/home/ubuntu/ece568-single-core-dse
 config_dir=$1
+num_cores=$2
 files=$(ls -1 $config_dir | sed -e 's/\..*$//')
 sim_dir=/home/ubuntu/5MD00_SC/src/
 simulation=eeg
@@ -21,7 +22,7 @@ do
     sim-outorder -redir:sim $base_dir/results/$file.out -config $base_dir/$config_dir$file.cfg $simulation &> $base_dir/start_$file.out &
     let counter=counter+1
   fi
-  if ! ((counter % 8)); then
+  if ! ((counter % num_cores)); then
     echo "$(date) - waiting for jobs to complete, count = $counter"
     wait
   fi
