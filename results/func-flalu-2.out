@@ -12,61 +12,61 @@ Window Size: 16
 Number of Virtual Registers: 32
 Number of Physical Registers: 16
 Datapath Width: 64
-Total Power Consumption: 73.7882
-Branch Predictor Power Consumption: 4.52313  (6.3%)
+Total Power Consumption: 62.1178
+Branch Predictor Power Consumption: 4.52313  (7.52%)
  branch target buffer power (W): 4.16837
  local predict power (W): 0.0879711
  global predict power (W): 0.0996078
  chooser power (W): 0.0702439
  RAS power (W): 0.0969383
-Rename Logic Power Consumption: 0.417965  (0.582%)
+Rename Logic Power Consumption: 0.417965  (0.695%)
  Instruction Decode Power (W): 0.0159915
  RAT decode_power (W): 0.113514
  RAT wordline_power (W): 0.0307815
  RAT bitline_power (W): 0.246771
  DCL Comparators (W): 0.0109075
-Instruction Window Power Consumption: 2.20432  (3.07%)
+Instruction Window Power Consumption: 2.20432  (3.67%)
  tagdrive (W): 0.0943488
  tagmatch (W): 0.033695
  Selection Logic (W): 0.0134217
  decode_power (W): 0.0532503
  wordline_power (W): 0.0844643
  bitline_power (W): 1.92514
-Load/Store Queue Power Consumption: 0.96318  (1.34%)
+Load/Store Queue Power Consumption: 0.96318  (1.6%)
  tagdrive (W): 0.457232
  tagmatch (W): 0.100774
  decode_power (W): 0.00799577
  wordline_power (W): 0.0150119
  bitline_power (W): 0.382166
-Arch. Register File Power Consumption: 3.57247  (4.98%)
+Arch. Register File Power Consumption: 3.57247  (5.94%)
  decode_power (W): 0.113514
  wordline_power (W): 0.0844643
  bitline_power (W): 3.37449
-Result Bus Power Consumption: 2.29754  (3.2%)
-Total Clock Power: 26.0975  (36.4%)
-Int ALU Power: 4.66013  (6.49%)
-FP ALU Power: 14.281  (19.9%)
-Instruction Cache Power Consumption: 2.21363  (3.08%)
+Result Bus Power Consumption: 2.29754  (3.82%)
+Total Clock Power: 21.5676  (35.9%)
+Int ALU Power: 4.66013  (7.75%)
+FP ALU Power: 7.14052  (11.9%)
+Instruction Cache Power Consumption: 2.21363  (3.68%)
  decode_power (W): 0.779481
  wordline_power (W): 0.028656
  bitline_power (W): 0.886372
  senseamp_power (W): 0.096
  tagarray_power (W): 0.423116
-Itlb_power (W): 0.263317 (0.367%)
-Data Cache Power Consumption: 5.18303  (7.22%)
+Itlb_power (W): 0.263317 (0.438%)
+Data Cache Power Consumption: 5.18303  (8.62%)
  decode_power (W): 0.651055
  wordline_power (W): 0.196735
  bitline_power (W): 2.71235
  senseamp_power (W): 0.768
  tagarray_power (W): 0.854886
-Dtlb_power (W): 0.901877 (1.26%)
-Level 2 Cache Power Consumption: 4.2091 (5.86%)
+Dtlb_power (W): 0.901877 (1.5%)
+Level 2 Cache Power Consumption: 4.2091 (7%)
  decode_power (W): 0.41817
  wordline_power (W): 0.0430878
  bitline_power (W): 3.0244
  senseamp_power (W): 0.192
  tagarray_power (W): 0.531433
-sim: command line: sim-outorder -redir:sim /home/ubuntu/ece568-single-core-dse/results/func-imult-3.out -config /home/ubuntu/ece568-single-core-dse/configs/step1-func/func-imult-3.cfg eeg 
+sim: command line: sim-outorder -redir:sim /home/ubuntu/ece568-single-core-dse/results/func-flalu-2.out -config /home/ubuntu/ece568-single-core-dse/configs/step1-func/func-flalu-2.cfg eeg 
 
 sim: simulation started @ Sat Mar  5 22:17:00 2016, options follow:
 
@@ -84,7 +84,7 @@ latency of all pipeline operations.
 -seed                       1 # random number generator seed (0 for timer seed)
 # -q                    false # initialize and terminate immediately
 # -chkpt               <null> # restore EIO trace execution from <fname>
-# -redir:sim     /home/ubuntu/ece568-single-core-dse/results/func-imult-3.out # redirect simulator output to file (non-interactive only)
+# -redir:sim     /home/ubuntu/ece568-single-core-dse/results/func-flalu-2.out # redirect simulator output to file (non-interactive only)
 # -redir:prog          <null> # redirect simulated program output to file
 -nice                       0 # simulator scheduling priority
 -max:inst                   0 # maximum number of inst's to execute
@@ -123,9 +123,9 @@ latency of all pipeline operations.
 -tlb:dtlb        dtlb:32:4096:4:l # data TLB config, i.e., {<config>|none}
 -tlb:lat                   30 # inst/data TLB miss latency (in cycles)
 -res:ialu                   4 # total number of integer ALU's available
--res:imult                  3 # total number of integer multiplier/dividers available
+-res:imult                  1 # total number of integer multiplier/dividers available
 -res:memport                2 # total number of memory system ports available (to CPU)
--res:fpalu                  4 # total number of floating point ALU's available
+-res:fpalu                  2 # total number of floating point ALU's available
 -res:fpmult                 1 # total number of floating point multiplier/dividers available
 # -pcstat              <null> # profile stat(s) against text addr's (mult uses ok)
 -bugcompat              false # operate in backward-compatible bugs mode (for testing only)
@@ -158,4 +158,4 @@ latency of all pipeline operations.
       GAg     : 1, W, 2^W, 0
       GAp     : 1, W, M (M > 2^W), 0
       PAg     : N, W, 2^W, 0
-      PA
+      PAp 
