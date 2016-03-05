@@ -5,15 +5,19 @@ if [ $# -eq 0 ]; then
     exit -1
 fi
 
+base_dir=/home/ubuntu/ece568-single-core-dse
 config_dir=$1
 files=$(ls -1 $config_dir | sed -e 's/\..*$//')
-cd ~/5MD00_SC/src/
+sim_dir=/home/ubuntu/5MD00_SC/src/
+simulation=eeg
+
+cd $sim_dir
 
 for file in $files
 do
   if [ ! -f results/$file.out ]; then
-    echo "Simulating with config $file"
-    sim-outorder -redir:sim results/$file.out -config $config_dir$file.cfg eeg
+    echo "running simulation: sim-outorder -redir:sim $base_dir/results/$file.out -config $config_dir$file.cfg $simulation"
+    nohup sim-outorder -redir:sim $base_dir/results/$file.out -config $base_dir/$config_dir$file.cfg $simulation &> start_$file.out &
   fi
 done
 
