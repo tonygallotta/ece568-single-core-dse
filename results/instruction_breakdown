@@ -1,0 +1,10 @@
+#          index      count    pdf 
+sim_inst_class_prof.start_dist
+load              171182879  20.30 
+store              84069724   9.97 
+uncond branch      60740822   7.20 
+cond branch        59922458   7.11 
+int computation   335861146  39.84 
+fp computation    131306086  15.57 
+trap                   1035   0.00 
+sim_inst_class_prof.end_dist
