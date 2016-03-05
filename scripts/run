@@ -1,0 +1,1 @@
+sim-outorder -redir:sim results/$1.out -config configs/$1.cfg eeg 

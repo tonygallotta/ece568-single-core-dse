@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "usage: run-all <config_dir>"
+    exit -1
+fi
+
+config_dir=$1
+files=$(ls -1 $config_dir | sed -e 's/\..*$//')
+cd ~/5MD00_SC/src/
+
+for file in $files
+do
+  if [ ! -f results/$file.out ]; then
+    echo "Simulating with config $file"
+    sim-outorder -redir:sim results/$file.out -config $config_dir$file.cfg eeg
+  fi
+done
+
+cd -

@@ -1,0 +1,8 @@
+filename=${1}
+ipc=$(cat $filename | grep sim_IPC | awk '{print $2}')
+cpi=$(cat $filename | grep sim_CPI | awk '{print $2}')
+epi=$(cat $filename | grep "\bavg_total_power_cycle_cc3\b" | awk '{print $2}')
+edp=$(python -c "print($cpi * $epi)")
+
+echo "ipc: $ipc"
+echo "edp: $edp ($cpi * $epi)"
