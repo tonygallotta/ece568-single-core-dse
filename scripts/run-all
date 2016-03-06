@@ -29,7 +29,7 @@ do
     let num_files=num_files-1
   fi
   if [ $counter -gt 0 ]; then
-    if [ ! ((counter % num_cores)) ] || [ ((counter == num_files)) ]; then
+    if ! ((counter % num_cores)) || [ "$counter" -eq "$num_files" ]; then
       echo "$(date) - waiting for jobs to complete, count = $counter"
       wait
     fi
