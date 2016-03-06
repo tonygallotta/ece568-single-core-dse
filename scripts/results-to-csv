@@ -18,7 +18,7 @@ do
   ipc=$(cat $file | grep sim_IPC | awk '{print $2}')
   cpi=$(cat $file | grep sim_CPI | awk '{print $2}')
   epi=$(cat $file | grep "\bavg_total_power_cycle_cc3\b" | awk '{print $2}')
-  edp=$(python -c "print($cpi * $epi)")
+  edp=$(python -c "print($cpi * $epi * $epi)")
   echo -e "$group,$config_name,$ipc,$edp"
 done
 

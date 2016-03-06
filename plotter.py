@@ -4,7 +4,8 @@ import numpy as np
 import matplotlib.cm as cm
 
 groups = {}
-ignored_sims = ["bp-taken", "bp-nottaken"]
+ignored_sims = ["bp-taken", "bp-nottaken", "bp-2lev-l1-128", "bp-2lev-l1-64", "bp-2lev-l1-8", "bp-2lev-l2-512"]
+
 with open("step1_results.csv") as csvfile:
   reader = csv.reader(csvfile, delimiter=',')
   # skip header row
@@ -51,17 +52,17 @@ for group_key, data in groups.iteritems():
   x = data["x"]
   y = data["y"]
   base = {"ipc": groups["base"]["x"][0], "edp": groups["base"]["y"][0]}
-  labels = data["labels"]
-  labels.insert(0, "base")
+  labels = ["base"]
   colors = cm.rainbow(np.linspace(0, 1, len(y)))
   fig = plt.figure()
   #fig = plt.figure(num=1, figsize=(13, 13), dpi=80, facecolor='w', edgecolor='k')
   points = [plt.scatter(base["ipc"], base["edp"], color="black", marker="x")]
   for i in range(0, len(y)):
     ipc, edp = x[i], y[i]
-    show_point = edp < base["edp"] # or ipc > base["ipc"]
+    show_point = edp < base["edp"] or ipc > base["ipc"]
     if show_point:
       points.append(plt.scatter(ipc, edp, color=colors[i]))
+      labels.append(data["labels"][i])
   ax = plt.subplot(111)
 
   ax.set_title(titles[group_key])
@@ -73,7 +74,7 @@ for group_key, data in groups.iteritems():
            scatterpoints=1,
            loc="upper left",
            bbox_to_anchor=(1, 1),
-           fontsize=8)
+           fontsize=10)
   fig.subplots_adjust(right=0.75)
   plt.savefig(group_key + ".png")
   plt.close(fig)

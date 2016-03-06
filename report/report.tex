@@ -177,31 +177,31 @@ This paper seeks to find the best single core superscalar architecture for a giv
 %\keywords{ACM proceedings; \LaTeX; text tagging}
 
 \section{Introduction}
-This study evaluates a single core superscalar architecture using the SimpleScalar simulator suite, seeking the best configuration for the \textit{eeg} benchmark application. A base architecture was given, and design modifications were then made in four groups, branch prediction, memory system, functional units, and data path. In the first phase of design space exploration, tuning one parameter at a time. In the second stage, closely related parameters within the same groups are tuned together. Finally, the best configurations across groups are combined to formulate the best found architecture. For each configuration we observe performance (IPC) and performance-energy (EDP), calculated as $ (CPI * energy/cycle) * CPI $. The "best" configuration seeks to maximize performance, and minimize performance-energy.
+This study evaluates a single core superscalar architecture using the SimpleScalar simulator suite, seeking the best configuration for the \texttt{eeg} benchmark application. A base architecture was given, and design modifications were then made in four groups, branch prediction, memory system, functional units, and data path. In the first phase of design space exploration, tuning one parameter at a time. In the second stage, closely related parameters within the same groups are tuned together. Finally, the best configurations across groups are combined to formulate the best found architecture. For each configuration we observe performance (IPC) and performance-energy (EDP), calculated as $ (CPI * energy/cycle) * CPI $. The "best" configuration seeks to maximize performance, and minimize performance-energy.
 
-\section{The {\secit Body} of The Paper}
-Typically, the body of a paper is organized
-into a hierarchical structure, with numbered or unnumbered
-headings for sections, subsections, sub-subsections, and even
-smaller sections.  The command \texttt{{\char'134}section} that
-precedes this paragraph is part of such a
-hierarchy.\footnote{This is the second footnote.  It
-starts a series of three footnotes that add nothing
-informational, but just give an idea of how footnotes work
-and look. It is a wordy one, just so you see
-how a longish one plays out.} \LaTeX\ handles the numbering
-and placement of these headings for you, when you use
-the appropriate heading commands around the titles
-of the headings.  If you want a sub-subsection or
-smaller part to be unnumbered in your output, simply append an
-asterisk to the command name.  Examples of both
-numbered and unnumbered headings will appear throughout the
-balance of this sample document.
+\section{Simulation}
+Simulations of the \texttt{eeg} application benchmark were performed using \texttt{sim-outorder}. The base configuration had performance of 1.5226 IPC, and a performance-energy product of 219.68. While many parameter changes were tested, unless otherwise noted, all graphs that follow show only configurations that outperformed the base configuration in at least one of these metrics.
 
-Because the entire article is contained in
-the \textbf{document} environment, you can indicate the
-start of a new paragraph with a blank line in your
-input file; that is why this sentence forms a separate paragraph.
+To gain some direction in performance tuning, the instruction profile for the benchmark was first evaluated using \texttt{sim-profile}. As shown in table \ref{table:instr_profile}, the benchmark is primarily an integer program. Given this instruction breakdown, most of the performance tuning was focused on branch prediction and the memory system.
+
+\begin{table}
+\centering
+\caption{Instruction Profile for \texttt{eeg}}
+\label{table:instr_profile}
+\begin{tabular}{| c | c | l | } \hline
+Type & Count & Percent \\ \hline
+load             & 171,182,879 & 20.30 \\ \hline
+store            &  84,069,724 &  9.97 \\ \hline
+uncond branch    &  60,740,822 &  7.20 \\ \hline
+cond branch      &  59,922,458 &  7.11 \\ \hline
+int computation  & 335,861,146 & 39.84 \\ \hline
+fp computation   & 131,306,086 & 15.57 \\ \hline
+trap             &      1,035 &  0.00 \\
+\hline\end{tabular}
+\end{table}
+
+\subsection{Branch Prediction}
+btb-128-2 wins.
 
 \subsection{Type Changes and {\subsecit Special} Characters}
 We have already seen several typeface changes in this sample.  You
