@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76b8c850-385b-46a5-adc0-fcbe0f507e7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plotter.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/configs/step1-func/func-flalu-2.cfg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/func-flalu-2.out" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bp.png" afterPath="$PROJECT_DIR$/bp.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dp.png" afterPath="$PROJECT_DIR$/dp.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/func.png" afterPath="$PROJECT_DIR$/func.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mem-dl1.png" afterPath="$PROJECT_DIR$/mem-dl1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mem-dl2-separated.png" afterPath="$PROJECT_DIR$/mem-dl2-separated.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mem-il1.png" afterPath="$PROJECT_DIR$/mem-il1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mem-il2-separated.png" afterPath="$PROJECT_DIR$/mem-il2-separated.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mem-l2-unified.png" afterPath="$PROJECT_DIR$/mem-l2-unified.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plotter.py" afterPath="$PROJECT_DIR$/plotter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/step1_results.csv" afterPath="$PROJECT_DIR$/step1_results.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ece568-single-core-dse.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,11 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="plotter.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plotter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plotter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4140625" vertical-offset="726" max-vertical-offset="1350">
-              <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="786" max-vertical-offset="1350">
+              <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -42,8 +48,25 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="step1_results.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/step1_results.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1155">
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="mem-l2-unified.png" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mem-l2-unified.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bp.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bp.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -64,8 +87,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/step1_results.csv" />
         <option value="$PROJECT_DIR$/plotter.py" />
+        <option value="$PROJECT_DIR$/step1_results.csv" />
       </list>
     </option>
   </component>
@@ -258,10 +281,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1280" height="732" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32899022" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32899022" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -307,19 +330,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bp.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/step1_results.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.234375" vertical-offset="390" max-vertical-offset="1125">
-          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mem-il1.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -345,19 +355,32 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plotter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="786" max-vertical-offset="1350">
+          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step1_results.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1155">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mem-l2-unified.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plotter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4140625" vertical-offset="726" max-vertical-offset="1350">
-          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/bp.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>

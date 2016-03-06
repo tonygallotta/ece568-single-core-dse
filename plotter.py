@@ -58,7 +58,7 @@ for group_key, data in groups.iteritems():
   ax = plt.subplot(111)
   plt.sca
   ax.set_title(titles[group_key])
-  ax.set_xlabel("IPC")
+  ax.set_xlabel("Performance")
   ax.set_ylabel("EDP")
   ax.ticklabel_format(useOffset=False, style="plain")
   plt.legend(points,
