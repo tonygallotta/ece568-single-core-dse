@@ -50,16 +50,20 @@ for group_key, data in groups.iteritems():
     continue
   x = data["x"]
   y = data["y"]
+  base = {"ipc": groups["base"]["x"][0], "edp": groups["base"]["y"][0]}
   labels = data["labels"]
   labels.insert(0, "base")
   colors = cm.rainbow(np.linspace(0, 1, len(y)))
   fig = plt.figure()
   #fig = plt.figure(num=1, figsize=(13, 13), dpi=80, facecolor='w', edgecolor='k')
-  points = [plt.scatter(groups["base"]["x"][0], groups["base"]["y"][0], color="black", marker="x")]
+  points = [plt.scatter(base["ipc"], base["edp"], color="black", marker="x")]
   for i in range(0, len(y)):
-    points.append(plt.scatter(x[i], y[i], color=colors[i]))
+    ipc, edp = x[i], y[i]
+    show_point = edp < base["edp"] # or ipc > base["ipc"]
+    if show_point:
+      points.append(plt.scatter(ipc, edp, color=colors[i]))
   ax = plt.subplot(111)
-  plt.sca
+
   ax.set_title(titles[group_key])
   ax.set_xlabel("Performance")
   ax.set_ylabel("EDP")
