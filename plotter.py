@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.cm as cm
 
 groups = {}
+ignored_sims = ["bp-taken", "bp-nottaken"]
 with open("step1_results.csv") as csvfile:
   reader = csv.reader(csvfile, delimiter=',')
   # skip header row
@@ -21,6 +22,8 @@ with open("step1_results.csv") as csvfile:
   for row in reader:
     group = row[0]
     config = row[1]
+    if config in ignored_sims:
+      continue
     if group == "mem":
       mem_group = row[1].split("-")
       group = mem_group[0] + "-" + mem_group[1]
