@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "usage: results-to-csv <results_dir>"
+    exit -1
+fi
+results_dir=${1}
+#echo "ipc: $ipc"
+#echo "edp: $edp ($cpi * $epi)"
+cd $results_dir > /dev/null
+
+echo -e "category,config,ipc,edp"
+
+for file in $(ls -1)
+do
+  config_name=$(echo $file | sed -e 's/\..*$//' | sed -e 's/.*\///')
+  group=$(echo $config_name | sed -e 's/-/ /' | awk '{print $1}')
+  ipc=$(cat $file | grep sim_IPC | awk '{print $2}')
+  cpi=$(cat $file | grep sim_CPI | awk '{print $2}')
+  epi=$(cat $file | grep "\bavg_total_power_cycle_cc3\b" | awk '{print $2}')
+  edp=$(python -c "print($cpi * $epi)")
+  echo -e "$group,$config_name,$ipc,$edp"
+done
+
+cd - > /dev/null
