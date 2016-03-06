@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  6 MAR 2016 08:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  6 MAR 2016 13:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -311,24 +311,19 @@ LaTeX Font Info:    Try loading font information for T1+ptm on input line 123.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-LaTeX Font Info:    Try loading font information for T1+aett on input line 197.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 186.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Underfull \hbox (badness 1360) in paragraph at lines 197--197
-[][]\T1/aer/m/n/9 Two of these, the \T1/aett/m/n/9 \num-bero-fau-thors \T1/aer/
-m/n/9 and \T1/aett/m/n/9 \alig-nau-
- []
+
+LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
+ne 229.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 253.
-
-
-LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 268.
+ne 244.
 
 [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -336,64 +331,65 @@ ne 268.
 ]
 
 LaTeX Warning: Citation `bowman:reasoning' on page \thepage  undefined on input
- line 295.
+ line 271.
 
 
 LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 2
-95.
+71.
 
 
 LaTeX Warning: Citation `braams:babel' on page \thepage  undefined on input lin
-e 295.
+e 271.
 
 
 LaTeX Warning: Citation `herlihy:methodology' on page \thepage  undefined on in
-put line 295.
+put line 271.
 
 
 LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 2
-96.
+72.
 
 
 LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
-ine 297.
+ine 273.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 297.
+ne 273.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 303.
+ne 279.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 314.
+ne 290.
 
 \c@theorem=\count117
 \c@definition=\count118
-[2]
-Overfull \hbox (15.60826pt too wide) detected at line 476
+
+Overfull \hbox (15.60826pt too wide) detected at line 452
 \OML/cmm/m/it/9 l \OT1/cmr/m/n/9 = [] \OML/cmm/m/it/9 f\OT1/cmr/m/n/9 (\OML/cmm
 /m/it/9 x\OT1/cmr/m/n/9 ) = [] [] = [] \OML/cmm/m/it/9 g\OT1/cmr/m/n/9 (\OML/cm
 m/m/it/9 x\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9 ^^A [] [] \OT1/cmr/m/n/9 = 0 \OMS/cm
 sy/m/n/9 ^^A \OML/cmm/m/it/9 L \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 ;
  []
 
+[2]
 
 LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
-ine 486.
+ine 462.
 
 No file report.bbl.
 [3] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 3217 strings out of 493117
- 41288 string characters out of 6135433
- 117087 words of memory out of 5000000
+ 3218 strings out of 493117
+ 41294 string characters out of 6135433
+ 118087 words of memory out of 5000000
  6567 multiletter control sequences out of 15000+600000
- 65049 words of font info for 94 fonts, out of 8000000 for 9000
+ 66203 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,35p,539b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,10n,35p,846b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r
 .enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.p
 fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.p
@@ -414,7 +410,7 @@ dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts
 /type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on report.pdf (3 pages, 216074 bytes).
+Output written on report.pdf (3 pages, 214823 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream

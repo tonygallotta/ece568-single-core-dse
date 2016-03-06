@@ -64,8 +64,8 @@
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
 
-\title{ECE 568 Single Core Design Space Exploration}
-
+\title{Single Core Design Space Exploration}
+\subtitle{ECE 568: Advanced Microprocessor Architecture, Spring 2016}
 %
 % You need the command \numberofauthors to handle the 'placement
 % and alignment' of the authors beneath the title.
@@ -122,7 +122,7 @@ Anthony Gallotta
 
 \maketitle
 \begin{abstract}
-This paper seeks to find the best single core superscalar architecture for a given benchmark application by experimenting with different architectures for branch prediction, memory systems, functional units, data path, and other areas. The metrics used to define the "best" architecture are \textit{performance} as instructions per cycle (IPC), which we seek to maximize, and \textit{performance-energy} as the energy delay product (EDP), calculated as $ (CPI * energy/cycle) * CPI $, which we seek to minimize.
+This paper seeks to find the best single core superscalar architecture for a given benchmark application by experimenting with different architectures for branch prediction, memory systems, functional units, data path, and other areas. The metrics used to define the "best" architecture are \textit{performance} as instructions per cycle (IPC) and \textit{performance-energy} as the energy delay product (EDP).
 \end{abstract}
 
 
@@ -177,31 +177,7 @@ This paper seeks to find the best single core superscalar architecture for a giv
 %\keywords{ACM proceedings; \LaTeX; text tagging}
 
 \section{Introduction}
-The \textit{proceedings} are the records of a conference.
-ACM seeks to give these conference by-products a uniform,
-high-quality appearance.  To do this, ACM has some rigid
-requirements for the format of the proceedings documents: there
-is a specified format (balanced  double columns), a specified
-set of fonts (Arial or Helvetica and Times Roman) in
-certain specified sizes (for instance, 9 point for body copy),
-a specified live area (18 $\times$ 23.5 cm [7" $\times$ 9.25"]) centered on
-the page, specified size of margins (1.9 cm [0.75"]) top, (2.54 cm [1"]) bottom
-and (1.9 cm [.75"]) left and right; specified column width
-(8.45 cm [3.33"]) and gutter size (.83 cm [.33"]).
-
-The good news is, with only a handful of manual
-settings\footnote{Two of these, the {\texttt{\char'134 numberofauthors}}
-and {\texttt{\char'134 alignauthor}} commands, you have
-already used; another, {\texttt{\char'134 balancecolumns}}, will
-be used in your very last run of \LaTeX\ to ensure
-balanced column heights on the last page.}, the \LaTeX\ document
-class file handles all of this for you.
-
-The remainder of this document is concerned with showing, in
-the context of an ``actual'' document, the \LaTeX\ commands
-specifically available for denoting the structure of a
-proceedings paper, rather than with giving rigorous descriptions
-or explanations of such commands.
+This study evaluates a single core superscalar architecture using the SimpleScalar simulator suite, seeking the best configuration for the \textit{eeg} benchmark application. A base architecture was given, and design modifications were then made in four groups, branch prediction, memory system, functional units, and data path. In the first phase of design space exploration, tuning one parameter at a time. In the second stage, closely related parameters within the same groups are tuned together. Finally, the best configurations across groups are combined to formulate the best found architecture. For each configuration we observe performance (IPC) and performance-energy (EDP), calculated as $ (CPI * energy/cycle) * CPI $. The "best" configuration seeks to maximize performance, and minimize performance-energy.
 
 \section{The {\secit Body} of The Paper}
 Typically, the body of a paper is organized
