@@ -7,12 +7,15 @@ fi
 
 base_dir=/home/ubuntu/ece568-single-core-dse
 config_dir=$1
-num_cores=$2
+hw_cores=$(lscpu | grep "CPU(s):" | awk '{print $2}')
+num_cores=${2:-$hw_cores}
 files=$(ls -1 $config_dir | sed -e 's/\..*$//')
 num_files=$(cat files | wc -l)
 sim_dir=/home/ubuntu/5MD00_SC/src/
 simulation=eeg
 counter=0
+
+echo "running $num_files simulations using $num_cores cores" && sleep 2
 
 cd $sim_dir
 
