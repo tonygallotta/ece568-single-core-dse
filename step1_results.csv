@@ -11,6 +11,7 @@ bp,bp-ras-16,1.5231,12.04053382
 bp,bp-taken,0.7578,19.27712184
 dp,dp-decode-2,1.2894,13.3064943
 dp,dp-decode-8,1.5230,12.05044848
+dp,dp-decode-issue-8,1.5323,13.96035394
 dp,dp-inorder,0.8050,16.16505606
 dp,dp-issue-2,1.2087,12.22302658
 dp,dp-issue-8,1.5323,13.95604678
@@ -20,6 +21,7 @@ dp,dp-ruu-8,1.2721,12.57162564
 func,func-alu-2,1.4094,12.1955955
 func,func-alu-6,1.5230,12.2754653
 func,func-alu-8,1.5230,12.53725172
+func,func-fpalu-1,1.5160,11.1106322
 func,func-fpalu-2,1.5230,11.4176174
 func,func-fpalu-6,1.5230,12.61998332
 func,func-fpmul-2,1.5347,12.00351456
@@ -30,6 +32,7 @@ mem,mem-dl1-512-sets,1.5238,13.85101461
 mem,mem-dl1-64-sets,1.5186,11.49405165
 mem,mem-dl1-assoc-2,1.5224,11.9527748
 mem,mem-dl1-assoc-8,1.5233,12.1178083
+mem,mem-dl1-bsize-128,0.1143,68.06625
 mem,mem-dl1-bsize-16,1.5223,12.11579791
 mem,mem-dl1-bsize-64,1.5233,11.9284737
 mem,mem-dl1-replace-fifo,1.5225,12.05930776

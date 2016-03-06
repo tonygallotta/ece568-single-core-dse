@@ -8,6 +8,16 @@ with open("step1_results.csv") as csvfile:
   reader = csv.reader(csvfile, delimiter=',')
   # skip header row
   next(reader, None)
+  titles = {
+    "func": "Functional Unit Modifications",
+    "mem-dl1": "L1 Data Cache Modifications",
+    "mem-il1": "L1 Instruction Cache Modifications",
+    "bp": "Branch Predictor Modifications",
+    "dp": "Data Path Modifications",
+    "mem-dl2-separated": "L2 Data Cache Modifications",
+    "mem-il2-separated": "L2 Instruction Cache Modifications",
+    "mem-l2-unified": "Unified L2 Cache Modifications",
+  }
   for row in reader:
     group = row[0]
     config = row[1]
@@ -47,7 +57,7 @@ for group_key, data in groups.iteritems():
     points.append(plt.scatter(x[i], y[i], color=colors[i]))
   ax = plt.subplot(111)
   plt.sca
-  ax.set_title(group_key)
+  ax.set_title(titles[group_key])
   ax.set_xlabel("IPC")
   ax.set_ylabel("EDP")
   ax.ticklabel_format(useOffset=False, style="plain")
