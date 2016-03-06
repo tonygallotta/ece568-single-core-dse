@@ -9,6 +9,7 @@ base_dir=/home/ubuntu/ece568-single-core-dse
 config_dir=$1
 num_cores=$2
 files=$(ls -1 $config_dir | sed -e 's/\..*$//')
+num_files=$(cat files | wc -l)
 sim_dir=/home/ubuntu/5MD00_SC/src/
 simulation=eeg
 counter=0
@@ -17,14 +18,16 @@ cd $sim_dir
 
 for file in $files
 do
-  if [ ! -f results/$file.out ]; then
+  if [ ! -f $base_dir/results/$file.out ]; then
     echo "running simulation: sim-outorder -redir:sim $base_dir/results/$file.out -config $config_dir$file.cfg $simulation"
     sim-outorder -redir:sim $base_dir/results/$file.out -config $base_dir/$config_dir$file.cfg $simulation &> $base_dir/start_$file.out &
     let counter=counter+1
   fi
-  if ! ((counter % num_cores)); then
-    echo "$(date) - waiting for jobs to complete, count = $counter"
-    wait
+  if [ $counter -gt 0 ]; then
+    if ! ((counter % num_cores)) || ((counter == num_files)); then
+      echo "$(date) - waiting for jobs to complete, count = $counter"
+      wait
+    fi
   fi
 done
 
