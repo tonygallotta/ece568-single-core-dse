@@ -2,6 +2,7 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.cm as cm
+import itertools
 
 groups = {}
 ignored_sims = ["bp-taken", "bp-nottaken", "bp-2lev-l1-128", "bp-2lev-l1-64", "bp-2lev-l1-8", "bp-2lev-l2-512"]
@@ -46,12 +47,19 @@ with open("step1_results.csv") as csvfile:
     groups[group]["y"].append(float(row[3]))
     groups[group]["labels"].append(config)
 
+markers = itertools.cycle((',', '+', '.', 'o', '*', '>', '<'))
+
+base = {"ipc": groups["base"]["x"][0], "edp": groups["base"]["y"][0]}
+point_filters = {
+  "bp":  lambda edp, ipc: edp < base["edp"]
+}
+
+
 for group_key, data in groups.iteritems():
   if group_key == "base":
     continue
   x = data["x"]
   y = data["y"]
-  base = {"ipc": groups["base"]["x"][0], "edp": groups["base"]["y"][0]}
   labels = ["base"]
   colors = cm.rainbow(np.linspace(0, 1, len(y)))
   fig = plt.figure()
@@ -59,9 +67,10 @@ for group_key, data in groups.iteritems():
   points = [plt.scatter(base["ipc"], base["edp"], color="black", marker="x")]
   for i in range(0, len(y)):
     ipc, edp = x[i], y[i]
-    show_point = edp < base["edp"] or ipc > base["ipc"]
+    show_point_func = point_filters.get(group_key, lambda edp, ipc: edp < base["edp"] or ipc > base["ipc"])
+    show_point = show_point_func(edp, ipc)
     if show_point:
-      points.append(plt.scatter(ipc, edp, color=colors[i]))
+      points.append(plt.scatter(ipc, edp, color=colors[i], marker=markers.next()))
       labels.append(data["labels"][i])
   ax = plt.subplot(111)
 
@@ -72,10 +81,11 @@ for group_key, data in groups.iteritems():
   plt.legend(points,
            labels,
            scatterpoints=1,
-           loc="upper left",
-           bbox_to_anchor=(1, 1),
+           loc=9,
+           bbox_to_anchor=(0.5, -0.2),
+           ncol=4,
            fontsize=10)
-  fig.subplots_adjust(right=0.75)
+  fig.subplots_adjust(bottom=0.3)
   plt.savefig(group_key + ".png")
   plt.close(fig)
 

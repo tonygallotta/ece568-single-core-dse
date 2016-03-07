@@ -1,0 +1,10 @@
+\begin{thebibliography}{1}
+
+\bibitem{yeh1993comparison}
+T.-Y. Yeh and Y.~N. Patt.
+\newblock A comparison of dynamic branch predictors that use two levels of
+  branch history.
+\newblock In {\em ACM SIGARCH Computer Architecture News}, volume~21, pages
+  257--266. ACM, 1993.
+
+\end{thebibliography}
