@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  6 MAR 2016 21:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  6 MAR 2016 21:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -183,7 +183,7 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 \c@paragraph=\count108
 
 Using 'Abbrev' bibliography style
-LaTeX Info: Redefining \cite on input line 1408.
+LaTeX Info: Redefining \cite on input line 1409.
 \bibindent=\dimen122
 \colcntr=\count109
 \saveb@x=\box29
@@ -218,23 +218,26 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
-))) (./report.aux)
+))) (./report.aux
+
+LaTeX Warning: Label `graph:meml2unified' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-
-(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+ (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count111
 \scratchdimen=\dimen123
@@ -291,93 +294,122 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 123.
+LaTeX Font Info:    Try loading font information for U+msa on input line 122.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 123.
+LaTeX Font Info:    Try loading font information for U+msb on input line 122.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 123.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 122.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 123.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 122.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-LaTeX Font Info:    Try loading font information for T1+aett on input line 180.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 179.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
+Underfull \hbox (badness 1253) in paragraph at lines 182--182
+\T1/aer/m/n/9 u-ra-tion files them-selves and scripts used in this sim-
+ []
+
 
 LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 189.
+(Font)              using `T1/aett/m/n' instead on input line 188.
 
-<./bp.png, id=1, 578.16pt x 433.62pt>
-File: ./bp.png Graphic file (type png)
- <use ./bp.png>
-Package pdftex.def Info: ./bp.png used on input line 213.
-(pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
- [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-<../mem-dl1-all.png, id=19, 578.16pt x 433.62pt>
+<./bp.png, id=18, 578.16pt x 433.62pt>
+File: ./bp.png Graphic file (type png)
+ <use ./bp.png>
+Package pdftex.def Info: ./bp.png used on input line 212.
+(pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
+
+Overfull \hbox (6.64018pt too wide) in paragraph at lines 223--224
+[]\T1/aer/m/n/9 Figure 3Mod-i-fi-ca-tions for L1 in-struc-tion cachefigure.3[] 
+shows
+ []
+
+
+Overfull \hbox (1.93112pt too wide) in paragraph at lines 226--227
+\T1/aer/m/n/9 struc-tion cachefigure.5[], and 8Data path modificationsfigure.8[
+]
+ []
+
+<../mem-dl1-all.png, id=20, 578.16pt x 433.62pt>
 File: ../mem-dl1-all.png Graphic file (type png)
  <use ../mem-dl1-all.png>
-Package pdftex.def Info: ../mem-dl1-all.png used on input line 231.
+Package pdftex.def Info: ../mem-dl1-all.png used on input line 230.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
 
-<../mem-il1.png, id=20, 578.16pt x 433.62pt>
+<../mem-il1.png, id=21, 578.16pt x 433.62pt>
 File: ../mem-il1.png Graphic file (type png)
  <use ../mem-il1.png>
-Package pdftex.def Info: ../mem-il1.png used on input line 239.
+Package pdftex.def Info: ../mem-il1.png used on input line 238.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
 
-<../mem-dl2-separated.png, id=21, 578.16pt x 433.62pt>
+<../mem-dl2-separated.png, id=22, 578.16pt x 433.62pt>
 File: ../mem-dl2-separated.png Graphic file (type png)
 
 <use ../mem-dl2-separated.png>
-Package pdftex.def Info: ../mem-dl2-separated.png used on input line 246.
+Package pdftex.def Info: ../mem-dl2-separated.png used on input line 245.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
 
-<../mem-il2-separated.png, id=22, 578.16pt x 433.62pt>
+<../mem-il2-separated.png, id=23, 578.16pt x 433.62pt>
 File: ../mem-il2-separated.png Graphic file (type png)
 
 <use ../mem-il2-separated.png>
-Package pdftex.def Info: ../mem-il2-separated.png used on input line 253.
+Package pdftex.def Info: ../mem-il2-separated.png used on input line 252.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
 
-<../mem-l2-unified.png, id=23, 578.16pt x 433.62pt>
+<../mem-l2-unified.png, id=24, 578.16pt x 433.62pt>
 File: ../mem-l2-unified.png Graphic file (type png)
 
 <use ../mem-l2-unified.png>
-Package pdftex.def Info: ../mem-l2-unified.png used on input line 260.
+Package pdftex.def Info: ../mem-l2-unified.png used on input line 259.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
  [2 <./bp.png> <../mem-dl1-all.png> <../mem-il1.png> <../mem-dl2-separated.png>
- <../mem-il2-separated.png>] (./report.bbl) [3
+] <../func.png, id=33, 578.16pt x 433.62pt>
+File: ../func.png Graphic file (type png)
 
- <../mem-l2-unified.png>] (./report.aux)
+<use ../func.png>
+Package pdftex.def Info: ../func.png used on input line 271.
+(pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
+ <../dp.png, id=34, 578.16pt x 433.62pt>
+File: ../dp.png Graphic file (type png)
+ <use ../dp.png>
+Package pdftex.def Info: ../dp.png used on input line 281.
+(pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
+
+(./report.bbl [3 <../mem-il2-separated.png> <../mem-l2-unified.png> <../func.pn
+g> <../dp.png>]) [4
+
+] (./report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3230 strings out of 493117
- 41838 string characters out of 6135433
- 114148 words of memory out of 5000000
- 6583 multiletter control sequences out of 15000+600000
+ 3249 strings out of 493117
+ 42127 string characters out of 6135433
+ 114662 words of memory out of 5000000
+ 6601 multiletter control sequences out of 15000+600000
  57613 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,35p,907b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -395,10 +427,10 @@ ts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
 1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on report.pdf (3 pages, 295645 bytes).
+Output written on report.pdf (4 pages, 345393 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

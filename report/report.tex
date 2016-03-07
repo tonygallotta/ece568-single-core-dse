@@ -47,7 +47,6 @@
 
 \documentclass{sig-alternate-05-2015}
 
-
 \begin{document}
 
 % Copyright
@@ -180,9 +179,9 @@ This paper seeks to find the best single core superscalar architecture for a giv
 This study evaluates a single core superscalar architecture using the SimpleScalar simulator suite, seeking the best configuration for the \texttt{eeg} benchmark application. A base architecture was given, and design modifications were then made in four groups, branch prediction, memory system, functional units, and data path. In the first phase of design space exploration, tuning one parameter at a time. In the second stage, closely related parameters within the same groups are tuned together. Finally, the best configurations across groups are combined to formulate the best found architecture. For each configuration we observe performance (IPC) and performance-energy (EDP), calculated as $ (CPI * energy/cycle) * CPI $. The "best" configuration seeks to maximize performance, and minimize performance-energy.
 
 \section{Simulation}
-Simulations of the \texttt{eeg} application benchmark were performed using \texttt{sim-outorder}. The base configuration had performance of 1.5226 IPC, and a performance-energy product of 219.68. While many parameter changes were tested, unless otherwise noted, all graphs that follow show only configurations that outperformed the base configuration in at least one of these metrics. The most desirable configurations will lie in the lower right side of the graphs that follow.
+Simulations of the \texttt{eeg} application benchmark were performed using \texttt{sim-outorder}. The base configuration had performance of 1.5226 IPC, and a performance-energy product of 219.68. While many parameter changes were tested, unless otherwise noted, all graphs that follow show only configurations that outperformed the base configuration in at least one of these metrics\footnote{Results from all configurations, along with the configuration files themselves and scripts used in this simulation are available at \url{https://github.com/tonygallotta/ece568-single-core-dse.git}}. The most desirable configurations will lie in the lower right side of the graphs that follow.
 
-To gain some direction in performance tuning, the instruction profile for the benchmark was first evaluated using \texttt{sim-profile}. As shown in table \ref{table:instr_profile}, the benchmark is primarily an integer program. Given this instruction breakdown, most of the performance tuning was focused on branch prediction and the memory system.
+To gain some direction in performance tuning, the instruction profile for the benchmark was first evaluated using \texttt{sim-profile}. As shown in table \ref{table:instr_profile}, the benchmark is primarily an integer program. Given this instruction breakdown, most of the performance tuning was focused on branch prediction and the memory system. For each group, the initial focus was on one attribute at a time. Once good parameters to tune were found, some combinations of parameters within each group were attempted as well to further improve performance.
 
 \begin{table}
 \centering
@@ -262,7 +261,30 @@ At the L2 cache, we see once again from figures \ref{graph:memdl2separated}, \re
 \label{graph:meml2unified}
 \end{figure}
 
+\subsection{Functional Units}
+Since this program is integer focused, one of the first modifications made to increase performance-energy was to decrease the number of floating point units. As figure \ref{graph:func} shows (fpalu-2), the number of floating point ALUs can be decreased from 4 to 2 with no change in IPC. Interestingly, increasing the number of FP multipliers does increase IPC, at a slight cost to EDP.
 
+The integer functional units seem to already be at a sweet spot. Increasing the number of integer ALUs or multipliers does not result in significant IPC gains. The base configuration only has 1 integer multiplier, so this cannot be decreased, but decreasing the number of ALUs results in significant IPC losses.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{../func}
+\caption{Functional unit modifications}
+\label{graph:func}
+\end{figure}
+
+\subsection{Data Path}
+The data path attributes modified were in-order vs. out of order (base) issue, instruction decode and issue width, and size of the reorder. On their own, none of these modifications result in a good trade off of performance vs. EDP. These attributes will be revisited when tuning parameters are combined since other modifications may make a wider instruction issue or reorder buffer more useful.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{../dp}
+\caption{Data path modifications}
+\label{graph:meml2unified}
+\end{figure}
+
+
+\section{Cross Group Simulations}
 
 \section{Conclusions}
 This paragraph will end the body of this sample document.

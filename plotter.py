@@ -51,7 +51,8 @@ markers = itertools.cycle((',', '+', '.', 'o', '*', '>', '<'))
 
 base = {"ipc": groups["base"]["x"][0], "edp": groups["base"]["y"][0]}
 point_filters = {
-  "bp":  lambda edp, ipc: edp < base["edp"]
+  "bp": lambda edp, ipc: edp <= base["edp"],
+  "dp": lambda edp, ipc: True
 }
 
 
