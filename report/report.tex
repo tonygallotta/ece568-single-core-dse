@@ -274,7 +274,7 @@ The integer functional units seem to already be at a sweet spot. Increasing the 
 \end{figure}
 
 \subsection{Data Path}
-The data path attributes modified were in-order vs. out of order (base) issue, instruction decode and issue width, and size of the reorder. On their own, none of these modifications result in a good trade off of performance vs. EDP. These attributes will be revisited when tuning parameters are combined since other modifications may make a wider instruction issue or reorder buffer more useful.
+The data path attributes modified were in-order vs. out of order (base) issue, instruction decode and issue width, and size of the reorder. On their own, none of these modifications result in a good trade off of performance vs. EDP. Even when tuning closely related parameters together, such as instruction decode and issue width, there are no clear performance improvements. These attributes will be revisited when tuning parameters are combined since other modifications may make a wider instruction issue or reorder buffer more useful. 
 
 \begin{figure}
 \centering
@@ -285,6 +285,7 @@ The data path attributes modified were in-order vs. out of order (base) issue, i
 
 
 \section{Cross Group Simulations}
+When attempting to use a smaller block size in the L2 cache than L1, the simulator crashed.
 
 \section{Conclusions}
 This paragraph will end the body of this sample document.

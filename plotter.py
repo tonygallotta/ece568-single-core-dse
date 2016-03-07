@@ -20,6 +20,7 @@ with open("step1_results.csv") as csvfile:
     "mem-dl2-separated": "L2 Data Cache Modifications",
     "mem-il2-separated": "L2 Instruction Cache Modifications",
     "mem-l2-unified": "Unified L2 Cache Modifications",
+    "combined": "Cross Group Modifications"
   }
   for row in reader:
     group = row[0]
@@ -54,7 +55,9 @@ point_filters = {
   "bp": lambda edp, ipc: edp <= base["edp"],
   "dp": lambda edp, ipc: True
 }
-
+legend_cols = {
+  "combined": 3
+}
 
 for group_key, data in groups.iteritems():
   if group_key == "base":
@@ -84,7 +87,7 @@ for group_key, data in groups.iteritems():
            scatterpoints=1,
            loc=9,
            bbox_to_anchor=(0.5, -0.2),
-           ncol=4,
+           ncol=legend_cols.get(group_key, 4),
            fontsize=10)
   fig.subplots_adjust(bottom=0.3)
   plt.savefig(group_key + ".png")

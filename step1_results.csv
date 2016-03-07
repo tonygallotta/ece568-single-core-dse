@@ -36,6 +36,10 @@ bp,bp-nottaken,0.7513,272.760358572
 bp,bp-perfect,1.5078,199.341364147
 bp,bp-ras-16,1.5231,220.795697031
 bp,bp-taken,0.7578,281.584774141
+combined,combined-base,1.6352,189.715398694
+combined,combined-blocksize-32,1.5339,186.332408973
+combined,combined-fetch-decode-issue-2,1.2162,163.127873515
+combined,combined-fetch-decode-issue-8,1.7670,226.914921681
 dp,dp-decode-2,1.2894,228.320813096
 dp,dp-decode-8,1.5230,221.159470864
 dp,dp-decode-issue-8,1.5323,298.638495449
