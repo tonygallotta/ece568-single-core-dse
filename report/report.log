@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  6 MAR 2016 21:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  7 MAR 2016 23:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -218,38 +218,66 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
-))) (./report.aux
+)))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count111
+\lst@gtempboxa=\box30
+\lst@token=\toks38
+\lst@length=\count112
+\lst@currlwidth=\dimen123
+\lst@column=\count113
+\lst@pos=\count114
+\lst@lostspace=\dimen124
+\lst@width=\dimen125
+\lst@newlines=\count115
+\lst@lineno=\count116
+\abovecaptionskip=\skip44
+\belowcaptionskip=\skip45
+\lst@maxwidth=\dimen126
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count117
+\lst@skipnumbers=\count118
+\lst@framebox=\box31
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+
+(./report.aux
 
 LaTeX Warning: Label `graph:meml2unified' multiply defined.
 
 )
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
  (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
-\scratchdimen=\dimen123
-\scratchbox=\box30
-\nofMPsegments=\count112
-\nofMParguments=\count113
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count114
-\MPscratchDim=\dimen124
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
-\everyMPtoPDFconversion=\toks39
+\scratchcounter=\count119
+\scratchdimen=\dimen127
+\scratchbox=\box32
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen128
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks40
 ) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -294,39 +322,40 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 122.
+\c@lstlisting=\count125
+LaTeX Font Info:    Try loading font information for U+msa on input line 123.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 122.
+LaTeX Font Info:    Try loading font information for U+msb on input line 123.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 122.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 123.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 122.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 123.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-LaTeX Font Info:    Try loading font information for T1+aett on input line 179.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 180.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Underfull \hbox (badness 1253) in paragraph at lines 182--182
+Underfull \hbox (badness 1253) in paragraph at lines 183--183
 \T1/aer/m/n/9 u-ra-tion files them-selves and scripts used in this sim-
  []
 
 
 LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 188.
+(Font)              using `T1/aett/m/n' instead on input line 191.
 
 [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -335,69 +364,182 @@ LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
 <./bp.png, id=18, 578.16pt x 433.62pt>
 File: ./bp.png Graphic file (type png)
  <use ./bp.png>
-Package pdftex.def Info: ./bp.png used on input line 212.
+Package pdftex.def Info: ./bp.png used on input line 215.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
-
-Overfull \hbox (6.64018pt too wide) in paragraph at lines 223--224
-[]\T1/aer/m/n/9 Figure 3Mod-i-fi-ca-tions for L1 in-struc-tion cachefigure.3[] 
-shows
- []
-
-
-Overfull \hbox (1.93112pt too wide) in paragraph at lines 226--227
-\T1/aer/m/n/9 struc-tion cachefigure.5[], and 8Data path modificationsfigure.8[
-]
- []
 
 <../mem-dl1-all.png, id=20, 578.16pt x 433.62pt>
 File: ../mem-dl1-all.png Graphic file (type png)
  <use ../mem-dl1-all.png>
-Package pdftex.def Info: ../mem-dl1-all.png used on input line 230.
+Package pdftex.def Info: ../mem-dl1-all.png used on input line 233.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
 
 <../mem-il1.png, id=21, 578.16pt x 433.62pt>
 File: ../mem-il1.png Graphic file (type png)
  <use ../mem-il1.png>
-Package pdftex.def Info: ../mem-il1.png used on input line 238.
+Package pdftex.def Info: ../mem-il1.png used on input line 241.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
 
 <../mem-dl2-separated.png, id=22, 578.16pt x 433.62pt>
 File: ../mem-dl2-separated.png Graphic file (type png)
 
 <use ../mem-dl2-separated.png>
-Package pdftex.def Info: ../mem-dl2-separated.png used on input line 245.
+Package pdftex.def Info: ../mem-dl2-separated.png used on input line 248.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
 
 <../mem-il2-separated.png, id=23, 578.16pt x 433.62pt>
 File: ../mem-il2-separated.png Graphic file (type png)
 
 <use ../mem-il2-separated.png>
-Package pdftex.def Info: ../mem-il2-separated.png used on input line 252.
+Package pdftex.def Info: ../mem-il2-separated.png used on input line 255.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
 
 <../mem-l2-unified.png, id=24, 578.16pt x 433.62pt>
 File: ../mem-l2-unified.png Graphic file (type png)
 
 <use ../mem-l2-unified.png>
-Package pdftex.def Info: ../mem-l2-unified.png used on input line 259.
+Package pdftex.def Info: ../mem-l2-unified.png used on input line 262.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
  [2 <./bp.png> <../mem-dl1-all.png> <../mem-il1.png> <../mem-dl2-separated.png>
 ] <../func.png, id=33, 578.16pt x 433.62pt>
 File: ../func.png Graphic file (type png)
 
 <use ../func.png>
-Package pdftex.def Info: ../func.png used on input line 271.
+Package pdftex.def Info: ../func.png used on input line 274.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
  <../dp.png, id=34, 578.16pt x 433.62pt>
 File: ../dp.png Graphic file (type png)
  <use ../dp.png>
-Package pdftex.def Info: ../dp.png used on input line 281.
+Package pdftex.def Info: ../dp.png used on input line 284.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
 
-(./report.bbl [3 <../mem-il2-separated.png> <../mem-l2-unified.png> <../func.pn
-g> <../dp.png>]) [4
+[3 <../mem-il2-separated.png> <../mem-l2-unified.png> <../func.png> <../dp.png>
+] [4
 
-] (./report.aux)
+] [5
+
+] [6] [7] (../configs/step3/combined-2lev-hist-4.cfg
+Underfull \vbox (badness 4279) has occurred while \output is active []
+
+ [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9])
+(../results/combined-2lev-hist-4.out [10]
+Overfull \hbox (594.06674pt too wide) in paragraph at lines 69--71
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (294.594pt too wide) in paragraph at lines 87--88
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Overfull \hbox (17.30441pt too wide) in paragraph at lines 96--97
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (6.21283pt too wide) in paragraph at lines 98--99
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+
+Overfull \hbox (22.8502pt too wide) in paragraph at lines 102--103
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (6.21283pt too wide) in paragraph at lines 129--130
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+LaTeX Font Info:    Try loading font information for OMS+aer on input line 192.
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ae/omsaer.fd
+File: omsaer.fd 1999/12/27
+)
+LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 192.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Overfull \hbox (45.03337pt too wide) in paragraph at lines 235--236
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.12495pt too wide) in paragraph at lines 239--240
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (28.396pt too wide) in paragraph at lines 241--242
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (28.396pt too wide) in paragraph at lines 242--243
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.30441pt too wide) in paragraph at lines 243--244
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (78.30812pt too wide) in paragraph at lines 244--245
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][] 
+ []
+
+
+Overfull \hbox (11.75862pt too wide) in paragraph at lines 245--246
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.75862pt too wide) in paragraph at lines 246--247
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+Overfull \hbox (6.21283pt too wide) in paragraph at lines 461--462
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (28.396pt too wide) in paragraph at lines 465--466
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17])
+(./report.bbl) [18] (./report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -406,13 +548,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3249 strings out of 493117
- 42127 string characters out of 6135433
- 114662 words of memory out of 5000000
- 6601 multiletter control sequences out of 15000+600000
+ 4457 strings out of 493117
+ 60114 string characters out of 6135433
+ 208006 words of memory out of 5000000
+ 7786 multiletter control sequences out of 15000+600000
  57613 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,35p,907b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,10n,35p,907b,1385s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texli
@@ -427,10 +569,10 @@ ts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
 1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on report.pdf (4 pages, 345393 bytes).
+Output written on report.pdf (18 pages, 416811 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

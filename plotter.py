@@ -7,7 +7,7 @@ import itertools
 groups = {}
 ignored_sims = ["bp-taken", "bp-nottaken", "bp-2lev-l1-128", "bp-2lev-l1-64", "bp-2lev-l1-8", "bp-2lev-l2-512"]
 
-with open("step1_results.csv") as csvfile:
+with open("results.csv") as csvfile:
   reader = csv.reader(csvfile, delimiter=',')
   # skip header row
   next(reader, None)

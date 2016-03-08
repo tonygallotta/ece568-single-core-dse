@@ -1,1 +1,1 @@
-scripts/results-to-csv results/ > step1_results.csv
+scripts/results-to-csv results/ > results.csv

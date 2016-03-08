@@ -1,0 +1,5 @@
+#!/bin/bash
+instance_type=${1:-c4.large}
+ec2-request-spot-instances ami-a3b388c9 --price 0.05 -t $instance_type
+
+echo "use ec2-describe-spot-instance-requests to check in on request status"
