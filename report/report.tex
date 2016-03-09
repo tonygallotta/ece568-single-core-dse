@@ -184,7 +184,7 @@ Simulations of the \texttt{eeg} application benchmark were performed using \text
 
 To gain some direction in performance tuning, the instruction profile for the benchmark was first evaluated using \texttt{sim-profile}. As shown in table \ref{table:instr_profile}, the benchmark is primarily an integer program. Given this instruction breakdown, most of the performance tuning was focused on branch prediction and the memory system. For each group, the initial focus was on one attribute at a time. Once good parameters to tune were found, some combinations of parameters within each group were attempted as well to further improve performance.
 
-Simulations were executed by providing configuration files to sim-outorder. A sample configuration file and output are provided at the end of this report. Simulation results were then processed by a series of \texttt{bash} scripts to generate a CSV file of the results, which was processed using Python and the \texttt{matplotlib} library to generate the figures in this report\footnote{See footnote 1}.
+Simulations were executed by providing configuration files to \texttt{sim-outorder}. A sample configuration file and output are provided at the end of this report. Simulation results were then processed by a series of \texttt{bash} scripts to generate a CSV file of the results, which was processed using Python and the \texttt{matplotlib} library to generate the figures in this report\footnote{See footnote 1}.
 
 \begin{table}
 \centering
@@ -204,7 +204,7 @@ trap             &      1,035 &  0.00 \\
 
 \subsection{Branch Prediction}
 %btb-128-2 wins.
-The first branch prediction change attempted was to use static prediction. This strategy resulted in much worse performance by both metrics and was quickly abandoned. Next, some tuning was made with the default bimodal branch predictor, which uses a simple strategy of picking the most common direction. Sticking with this scheme, the branch target buffer (BTB) size and associativity was adjusted. In figure \ref{graph:bp_results}, the points labeled as \texttt{bp-btb-<sets>-<associativity>} indicate the results of these adjustments. The BTB configuration of 128 sets with 2 way associativity is able to achieve the same performance as the base configuration, with a much lower EDP. 
+The first branch prediction change attempted was to use static prediction, to see if the decreased power consumption would be significant enough to improve EDP. This strategy resulted in much worse performance by both metrics though, and was quickly abandoned. Next, some tuning was made with the default bimodal branch predictor, which uses a simple strategy of picking the most common direction. Sticking with this scheme, the branch target buffer (BTB) size and associativity was adjusted. In figure \ref{graph:bp_results}, the points labeled as \texttt{bp-btb-<sets>-<associativity>} indicate the results of these adjustments. The BTB configuration of 128 sets with 2 way associativity is able to achieve the same performance as the base configuration, with a much lower EDP. 
 
 Two level branch predictors use a combination of the last $k$ historical  branch outcomes, as well as the behavior for a specific pattern of previous branches \cite{yeh1993comparison}. While many of the 2 level configurations did not perform the base configuration, the 2 level Global Address (GA) branch predictor with a 4 wide history (bp-2level-hist-4) did achieve a better IPC. Combining these configuration changes (bp-comb-128-2) by keeping the best found BTB size and using a combined bimodal and 2-level branch predictor gives about a 5\% performance-energy improvement over the base configuration.
 
@@ -218,15 +218,15 @@ A perfect branch prediction scheme is plotted for comparison. Suprisingly, the p
 \end{figure}
 
 \subsection{Memory System}
-The simulator has a 2 level cache hierarchy, and different sizes, associativity, block sizes, and replacement policies were experimented with at each level, and for both instruction and data caches. Cache parameter modifications were not chosen to align with the program in any way, they were simply chosen to cast a wide net over the design space and see which modifications may show promise. For example, most parameters were increased and decreased by a power of 2 for an initial experiment. If that modification resulted in a performance improvement, another power of 2 increase or decrease was attempted, until performance started to degrade.
+The simulator has a 2 level cache hierarchy, and different sizes, associativity, block sizes, and replacement policies were experimented with at each level, and for both instruction and data caches. Cache parameter modifications were not chosen to align with the program in any way since it is difficult to predict the memory access patterns of a program without careful inspection of the source code. To start with, parameters were simply chosen to cast a wide net over the design space and see which modifications may show promise. For example, most parameters were increased and decreased by a power of 2 for an initial experiment. If that modification resulted in a performance improvement, another power of 2 increase or decrease was attempted, until performance started to degrade.
 
 \subsubsection{L1 Cache}
 As figure \ref{graphdl1all} shows, increasing the size of the L1 data cache (sets) did not result in significant IPC improvements relative to their increased power consumption. Increasing the block size to 64 while keeping the total L1 size the same (bsize-64) yields the best result in terms of both of our architecture goals.
 
-Figure \ref{graphil1all} shows similar results for the instruction cache - a block size of 64 performs best.
+Figure \ref{graphil1all} shows similar results for the instruction cache - a block size of 64 performs best. These results indicate that there is some spatial locality in the instructions and data.
 
 \subsubsection{L2 Cache}
-At the L2 cache, we see once again from figures \ref{graph:memdl2separated}, \ref{graph:memil2separated}, and \ref{graph:meml2unified} that a unified cache with a decreased block size performs best.
+At the L2 cache, we see once again from figures \ref{graph:memdl2separated}, \ref{graph:memil2separated}, and \ref{graph:meml2unified} that a unified cache with a decreased block size performs best. This is an interesting result since the L1 cache benefited from an increased block size - the performance improvement here seems to be primarily in aligning the L1 and L2 cache sizes, rather than one particular value. We also see a performance gain in \textit{decreasing} the number of sets in the L1 cache, indicating that this program doesn't have working sets large enough to reap the benefits of a larger cache.
 
 \begin{figure}
 \centering
@@ -265,7 +265,7 @@ At the L2 cache, we see once again from figures \ref{graph:memdl2separated}, \re
 \end{figure}
 
 \subsection{Functional Units}
-Since this program is integer focused, one of the first modifications made to increase performance-energy was to decrease the number of floating point units. As figure \ref{graph:func} shows (fpalu-2), the number of floating point ALUs can be decreased from 4 to 2 with no change in IPC. Interestingly, increasing the number of FP multipliers does increase IPC, at a slight cost to EDP.
+Since this program is integer focused, one of the first modifications made to increase performance-energy was to decrease the number of floating point units. As figure \ref{graph:func} shows (fpalu-2), the number of floating point ALUs can be decreased from 4 to 2 with no change in IPC. Interestingly, increasing the number of FP multipliers (from 1 to 2) does increase IPC, at a slight cost to EDP.
 
 The integer functional units seem to already be at a sweet spot. Increasing the number of integer ALUs or multipliers does not result in significant IPC gains. The base configuration only has 1 integer multiplier, so this cannot be decreased, but decreasing the number of ALUs results in significant IPC losses.
 
@@ -302,13 +302,15 @@ In this step, modifications to the instruction issue width were revisited, tunin
 \section{Conclusions}
 Simulation tools can be useful in tuning architectures for good performance for a specific application. Observing the instruction profile for the benchmark application can be helpful in making educated guesses when tuning architecture details, but some parameters like memory configurations can be difficult to estimate, and can be easier to tune by testing a wide range of parameters and observing their effects. 
 
+The design space, even for a single core processor, can be extremely large. Tuning parameters one at a time and combining the best results in each class can be an effective strategy for finding a good design with so many choices available. The experiments described in this paper seek to achieve a balance between performance and power consumption, without defining any quantitative targets for either. Given constraints on either aspect, other configurations found in this experiment could easily have been chosen, for example to optimize for performance or performance-energy alone.
+
 \newpage
 \onecolumn
 \appendix
 
 \section{Results of all simulations}
 
-\begin{table}
+\begin{table}[h]
 \centering
 \label{table:all_results}
 \begin{tabular}{| c | c | c | l | } \hline
@@ -352,7 +354,8 @@ combined & base & 1.6352 & 189.72 \\ \hline
 combined & blocksize-32 & 1.5339 & 186.33 \\ \hline
 combined & fetch-decode-issue-2 & 1.2162 & 163.13 \\ \hline
 combined & fetch-deodec-issue-8 & 1.7670 & 226.91 \\ \hline
-combined & fpmul-1 & 1.6152 & 187.55 \\ \hline
+combined & fpmul-1 & 1.6152 & 187.55 \\ 
+\hline
 \end{tabular}
 \end{table}
 

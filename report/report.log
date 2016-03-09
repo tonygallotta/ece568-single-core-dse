@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  8 MAR 2016 19:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  8 MAR 2016 23:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -399,28 +399,28 @@ File: ../mem-l2-unified.png Graphic file (type png)
 <use ../mem-l2-unified.png>
 Package pdftex.def Info: ../mem-l2-unified.png used on input line 262.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
- [2 <./bp.png> <../mem-dl1-all.png> <../mem-il1.png> <../mem-dl2-separated.png>
-] <../func.png, id=33, 578.16pt x 433.62pt>
+ <../func.png, id=25, 578.16pt x 433.62pt>
 File: ../func.png Graphic file (type png)
 
 <use ../func.png>
 Package pdftex.def Info: ../func.png used on input line 274.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
- <../dp.png, id=34, 578.16pt x 433.62pt>
+ [2 <./bp.png> <../mem-dl1-all.png> <../mem-il1.png>]
+<../dp.png, id=33, 578.16pt x 433.62pt>
 File: ../dp.png Graphic file (type png)
  <use ../dp.png>
 Package pdftex.def Info: ../dp.png used on input line 284.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
-
-[3 <../mem-il2-separated.png> <../mem-l2-unified.png> <../func.png>]
-<../combined.png, id=41, 578.16pt x 433.62pt>
+ [3 <../mem-dl2-separated.png> <../mem-il2-separated.png> <../mem-l2-unified.pn
+g> <../func.png> <../dp.png>] <../combined.png, id=42, 578.16pt x 433.62pt>
 File: ../combined.png Graphic file (type png)
  <use ../combined.png>
 Package pdftex.def Info: ../combined.png used on input line 297.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
- [4
 
- <../dp.png> <../combined.png>] [5
+[4
+
+ <../combined.png>] [5
 
 ] [6] (../configs/step3/combined-2lev-hist-4.cfg
 Underfull \vbox (badness 4279) has occurred while \output is active []
@@ -574,7 +574,7 @@ ts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
 1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on report.pdf (17 pages, 448447 bytes).
+Output written on report.pdf (17 pages, 448459 bytes).
 PDF statistics:
  131 PDF objects out of 1000 (max. 8388607)
  80 compressed objects within 1 object stream
