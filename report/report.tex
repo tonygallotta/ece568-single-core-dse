@@ -288,9 +288,10 @@ The data path attributes modified were in-order vs. out of order (base) issue, i
 
 
 \section{Cross Group Simulations}
-For the final group of simulations, the best parameter modifications from each group were selected, and combined. The only exception was between the L1 and L2 caches. While a block size of 64 performed best for the L1 cache, the best performance for the L2 cache was observed under a block size of 32. In practice, this doesn't really make sense since the L1 cache is typically a subest of the L2 cache, and the L1 cache would have to load 2 blocks to fill 1 of its own. sim-outorder did not even allow this configuration, and crashed when attempting to use a smaller block size in the L2 cache than L1. Therefore, the block size was kept consistent between the 2 levels, and both 32 (combined-blocksize-32) and 64 (combined-base) were tried for the combined configuration. As seen in figure \ref{graph:combined}, the block size of 64 achieved a pretty large increase in IPC without a large EDP sacrifice, so this architecture was chosen to proceed with.
+For the final group of simulations, the best parameter modifications from each group were selected, and combined. The only exception was between the L1 and L2 caches. While a block size of 64 performed best for the L1 cache, the best performance for the L2 cache was observed under a block size of 32. In practice, this doesn't really make sense since the L1 cache is typically a subest of the L2 cache, and the L1 cache would have to load 2 blocks to fill 1 of its own. sim-outorder did not even allow this configuration, and crashed when attempting to use a smaller block size in the L2 cache than L1. Therefore, the block size was kept consistent between the 2 levels, and both 32 (combined-blocksize-32) and 64 (combined-base) were tried for the combined configuration. As seen in figure \ref{graph:combined}, the block size of 64 achieved a pretty large increase in IPC without a large EDP sacrifice, so this architecture was chosen to proceed with. Details for this configuration are listed at the end of this paper.
 
-In this step, modifications to the instruction issue width were revisited, tuning all related parameters together (fetch, decode, issue, and commit width), however the results were fairly extreme. An issue width of 8 resulted in a 16\% IPC increase, but also increased the EDP by 3\%. Dropping the width down to 2 resulted in a significant EDP decrease (25\%), but also dropped IPC by 20\%. The architecture that achieved the best performance overall was INSERT_HERE, achieving roughly a 15\% decrease in performance-energy, and 7\% improvement in performance.
+In this step, modifications to the instruction issue width were revisited, tuning all related parameters together (fetch, decode, issue, and commit width), however the results were fairly extreme. An issue width of 8 resulted in a 16\% IPC increase, but also increased the EDP by 3\%. Dropping the width down to 2 resulted in a significant EDP decrease (25\%), but also dropped IPC by 20\%. The architecture that achieved the best performance overall was comb-2lev-hist-4, as seen in figure \ref{graph:combined}, achieving roughly a 15\% decrease in performance-energy, and 7\% improvement in performance.
+
 \begin{figure}
 \centering
 \includegraphics[scale=0.4]{../combined}
@@ -299,7 +300,7 @@ In this step, modifications to the instruction issue width were revisited, tunin
 \end{figure}
 
 \section{Conclusions}
-Simulation tools can be useful in tuning architectures for good performance for a specific application. Observing the instruction profile for a given application can be helpful in making educated guesses when tuning architecture details, but some parameters like memory configurations can be difficult to estimate, and can be easier to tune by testing a wide range of parameters and observing their effects.
+Simulation tools can be useful in tuning architectures for good performance for a specific application. Observing the instruction profile for the benchmark application can be helpful in making educated guesses when tuning architecture details, but some parameters like memory configurations can be difficult to estimate, and can be easier to tune by testing a wide range of parameters and observing their effects. 
 
 \newpage
 \onecolumn
